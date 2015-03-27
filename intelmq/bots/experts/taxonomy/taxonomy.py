@@ -23,6 +23,7 @@ TAXONOMY = {
             "blacklist"                 : "Other",
             "unknown"                   : "Other",
             "test"                      : "Test",
+	        "zeus"                      : "Zeus C&C",	
            }
            
 
