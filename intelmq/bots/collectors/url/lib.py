@@ -15,9 +15,10 @@ def fetch_url(url, timeout=60.0, chunk_size=16384, http_proxy = None, https_prox
         opener = urllib2.build_opener(proxy)
         urllib2.install_opener(opener)
 
-    req = urllib2.urlopen(url, timeout = timeout)
+    req = urllib2.Request(url, headers={'User-Agent' : "IntelMq"}, timeout = timeout) 
+    con = urllib2.urlopen( req )
     iostring = StringIO.StringIO()
-    shutil.copyfileobj(req, iostring, chunk_size)
+    shutil.copyfileobj(con, iostring, chunk_size)
     value = iostring.getvalue()
     iostring.close()
     return decode(value)
