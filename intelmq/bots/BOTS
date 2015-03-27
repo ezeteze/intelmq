@@ -8,6 +8,14 @@
                 "rate_limit": "3600"
             }
         },
+       "Malc0de Database": {
+            "module": "intelmq.bots.collectors.url.collector",
+            "description": "Malc0de Database",
+            "parameters": {
+                "url": "http://malc0de.com/bl/IP_Blacklist.txt",
+                "rate_limit": "3600"
+            }
+        },
         "Taichung City Netflow": {
             "module": "intelmq.bots.collectors.url.collector",
             "description": "Taichung City Netflow Collector is the bot responsible to get the report from source of information.",
@@ -160,6 +168,13 @@
                 "rate_limit": "0"
             }
         },
+        "malc0de": {
+            "module": "intelmq.bots.parsers.malc0de.parser",
+            "description": "malc0de",
+            "parameters": {
+                "rate_limit": "0"
+            }
+        },   
         "Taichung City Netflow": {
             "module": "intelmq.bots.parsers.taichungcitynetflow.parser",
             "description": "Taichung City Netflow Parser is the bot responsible to parse the report and sanitize the information.",
